@@ -19,8 +19,5 @@ default_library = 'static'
 pkgconfig = 'pkg-config'
 cmake = 'cmake'
 
-#[paths]
-#libdir = '/usr/local/musl/lib'
-
 [project options]
 udevrulesdir = '/usr/lib/udev/rules.d'
