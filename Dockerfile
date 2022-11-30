@@ -1,0 +1,9 @@
+ARG ARCH
+ARG HOST
+FROM dockcross/$ARCH
+ARG HOST
+ENV ENV_HOST=$HOST
+WORKDIR /work
+COPY . .
+RUN chmod +x CL.sh
+ENTRYPOINT ./CL.sh
