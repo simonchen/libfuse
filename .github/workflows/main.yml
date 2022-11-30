@@ -36,8 +36,8 @@ jobs:
         cp build/release/upx /usr/local/bin/upx
     - name: Upx compress binary
       run: |
-        upx ./${{ matrix.platform.target }}/mount.davfs
-        upx ./${{ matrix.platform.target }}/umount.davfs
+        upx ./${{ matrix.platform.target }}/fusermount
+        upx ./${{ matrix.platform.target }}/mount.fuse
     - name: Upload binary artifacts
       uses: actions/upload-artifact@v3
       with:
