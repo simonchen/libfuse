@@ -5,22 +5,19 @@ cpu = 'mips'
 endian = 'big'
 
 [properties]
-sys_root = '/usr/xcc/mipsel-unknown-linux-gnu/mipsel-unknown-linux-gnu/sysroot'
+sys_root = '/usr/xcc/mips-unknown-linux-gnu/mips-unknown-linux-gnu/sysroot'
 pkg_config_libdir = '/usr/lib/pkgconfig'
 
 [built-in options]
-c_link_args = ['-static', '-static-libgcc']#, '-Wl,-rpath=/usr/xcc/mipsel-unknown-linux-gnu/mipsel-unknown-linux-gnu/sysroot/usr/lib', '-lc']
-cpp_link_args = ['-static', '-static-libgcc']#, '-Wl,-rpath=/usr/xcc/mipsel-unknown-linux-gnu/mipsel-unknown-linux-gnu/sysroot/usr/lib', '-lc']
-libdir = '/usr/xcc/mipsel-unknown-linux-gnu/lib/gcc/mipsel-unknown-linux-gnu/8.5.0'
+c_link_args = ['-static', '-static-libgcc']#, '-Wl,-rpath=/usr/xcc/mips-unknown-linux-gnu/mips-unknown-linux-gnu/sysroot/usr/lib', '-lc']
+cpp_link_args = ['-static', '-static-libgcc']#, '-Wl,-rpath=/usr/xcc/mips-unknown-linux-gnu/mips-unknown-linux-gnu/sysroot/usr/lib', '-lc']
+libdir = '/usr/xcc/mips-unknown-linux-gnu/lib/gcc/mips-unknown-linux-gnu/8.5.0'
 prefix = '/usr/xcc'
 default_library = 'static'
 
 [binaries]
 pkgconfig = 'pkg-config'
 cmake = 'cmake'
-
-#[paths]
-#libdir = '/usr/local/musl/lib'
 
 [project options]
 udevrulesdir = '/usr/lib/udev/rules.d'
