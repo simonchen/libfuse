@@ -14,8 +14,8 @@ meson configure
 ninja
 
 echo "\n================ Release =============================\n"
-mkdir ./$ARCH
-cp ./build/util/fusermount3 ./$ARCH/fusermount
-cp ./build/util/mount.fuse3 ./$ARCH/mount.fuse
-cp ./build/lib/libfuse3.a ./$ARCH/libfuse.a
-ls -lt ./$ARCH/
+mkdir ./$ENV_HOST
+cp ./build/util/fusermount3 ./$ENV_HOST/fusermount
+cp ./build/util/mount.fuse3 ./$ENV_HOST/mount.fuse
+cp ./build/lib/libfuse3.a ./$ENV_HOST/libfuse.a
+ls -lt ./$ENV_HOST/
