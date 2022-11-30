@@ -3,6 +3,7 @@ echo "\n================ ENVIROMENT ========================\n"
 env
 
 echo "\n======= INSTALL - MESON / CMAKE / UDEV =============\n"
+apt-get update
 apt install meson cmake libudev-dev
 
 echo "\n================ MESON configure ===================\n"
