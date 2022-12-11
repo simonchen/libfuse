@@ -24,6 +24,9 @@ jobs:
           - target: "armv6-unknown-linux-gnu"
             image_tag: "linux-armv6-lts"
             container_name: "armv6-release"
+          - target: "armv7-unknown-linux-gnu"
+            image_tag: "linux-armv7-lts"
+            container_name: "armv7-release"
     steps:
     - uses: actions/checkout@v3
     - name: MIPS Little Endian x32
