@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: MIPS Little Endian x32
       run: |
-          docker build . --build-arg ARCH=${{ matrix.platform.image_tag }} --build-arg HOST=${{ matrix.platform.target }} --no-cache -t ${{ matrix.platform.target }} --file Dockerfile
+          docker build . --build-arg ARG_ARCH=${{ matrix.platform.image_tag }} --build-arg ARG_HOST=${{ matrix.platform.target }} --no-cache -t ${{ matrix.platform.target }} --file Dockerfile
           docker run --name ${{ matrix.platform.container_name }} ${{ matrix.platform.target }} 
           #docker ps -a
           docker cp ${{ matrix.platform.container_name }}:/work/${{ matrix.platform.target }} .
