@@ -1,6 +1,9 @@
 name: Cross-Release
 
-on: [push]
+on:
+  release:
+    types: 
+        - created
 
 jobs:
   build_mips:
@@ -15,6 +18,9 @@ jobs:
           - target: "mipsel-unknown-linux-gnu"
             image_tag: "linux-mipsel-lts"
             container_name: "mipsel-release"
+          - target: "armv5-unknown-linux-gnu"
+            image_tag: "linux-armv5"
+            container_name: "armv5-release"
     steps:
     - uses: actions/checkout@v3
     - name: MIPS Little Endian x32
@@ -48,7 +54,7 @@ jobs:
       if: "startsWith(github.ref, 'refs/tags/')"
       run: |
         cd ./${{ matrix.platform.target }}
-        tar -czvf ../${{ matrix.platform.target }}-bin.tar.gz -C ./ .
+        tar -czvf ../${{ matrix.platform.target }}-bin.tar.gz -C . .
         cd -
     - name: Upload binary to GitHub Release
       uses: softprops/action-gh-release@v1
