@@ -1,0 +1,23 @@
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'armv5'
+endian = 'little'
+
+[properties]
+sys_root = '/usr/xcc/armv5-unknown-linux-gnu/armv5-unknown-linux-gnu/sysroot'
+pkg_config_libdir = '/usr/lib/pkgconfig'
+
+[built-in options]
+c_link_args = ['-static', '-static-libgcc']
+cpp_link_args = ['-static', '-static-libgcc']
+libdir = '/usr/xcc/armv5-unknown-linux-gnu/lib/gcc/armv5-unknown-linux-gnu/8.5.0'
+prefix = '/usr/xcc'
+default_library = 'static'
+
+[binaries]
+pkgconfig = 'pkg-config'
+cmake = 'cmake'
+
+[project options]
+udevrulesdir = '/usr/lib/udev/rules.d'
