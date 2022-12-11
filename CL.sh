@@ -9,7 +9,7 @@ apt -y install meson cmake libudev-dev
 echo "\n================ MESON configure ===================\n"
 mkdir ./build
 cd ./build
-meson .. --cross-file=../cross-file-$ARCH.txt
+meson .. --cross-file=../cross-file-$ENV_ARCH.txt
 meson configure
 ninja
 
